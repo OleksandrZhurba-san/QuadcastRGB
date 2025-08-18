@@ -6,7 +6,7 @@ CFLAGS_INS = -s -O2 -DVERSION="\"$(VERSION)"\"
 
 LIBS = -lusb-1.0
 
-SRCMODULES = modules/argparser.c modules/devio.c modules/rgbmodes.c
+SRCMODULES = modules/argparser.c modules/devio.c modules/rgbmodes.c modules/pidfile.c
 OBJMODULES = $(SRCMODULES:.c=.o)
 
 BINPATH = ./quadcastrgb
