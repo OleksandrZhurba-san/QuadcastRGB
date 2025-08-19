@@ -29,11 +29,13 @@
 #ifndef DEVIO_SENTRY
 #define DEVIO_SENTRY
 
-#include <libusb-1.0/libusb.h>
 #include "rgbmodes.h" /* for datpack & byte_t types, count_color_pairs, defs */
+#include <libusb-1.0/libusb.h>
 
 /* Functions */
 libusb_device_handle *open_micro(datpack *data_arr);
-void send_packets(libusb_device_handle *handle, const datpack *data_arr,
-                  int pck_cnt, int verbose);
+void                  send_packets(libusb_device_handle *handle,
+                                   const datpack        *data_arr,
+                                   int                   pck_cnt,
+                                   int                   verbose);
 #endif

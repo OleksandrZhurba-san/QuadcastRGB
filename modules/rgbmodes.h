@@ -23,15 +23,15 @@
  * <https://www.gnu.org/licenses/gpl-2.0.en.html>. For any questions
  * concerning the license, you can write to <licensing@fsf.org>.
  * Also, you may visit the Free Software Foundation at
- * 51 Franklin Street, Fifth Floor Boston, MA 02110 USA. 
+ * 51 Franklin Street, Fifth Floor Boston, MA 02110 USA.
  */
 #ifndef RGBMODES_SENTRY
 #define RGBMODES_SENTRY
 
-#include <stdio.h> /* for fprintf */
-#include <stdlib.h> /* for srand & rand */
-#include <time.h> /* for time */
 #include "argparser.h" /* for struct colschemes, strequ, enums */
+#include <stdio.h>     /* for fprintf */
+#include <stdlib.h>    /* for srand & rand */
+#include <time.h>      /* for time */
 
 /* Constants */
 #define MAX_PCT_COUNT 90
@@ -43,8 +43,8 @@
 #define RGB_CODE 0x81
 
 /* Macros */
-#define DIV_CEIL(X, Y) (((X)/(Y)) + ((X)%(Y) != 0))
-#define SPEED_RANGE(MIN, MAX, SPD) MIN + (MAX - MIN)*(100-SPD)/100
+#define DIV_CEIL(X, Y) (((X) / (Y)) + ((X) % (Y) != 0))
+#define SPEED_RANGE(MIN, MAX, SPD) MIN + (MAX - MIN) * (100 - SPD) / 100
 /* Blink random */
 #define MAX_SPD 101
 #define MAX_DLY 100
@@ -68,7 +68,7 @@
 
 /* Types */
 typedef unsigned char byte_t;
-typedef byte_t datpack[DATA_PACKET_SIZE];
+typedef byte_t        datpack[DATA_PACKET_SIZE];
 
 /* Functions */
 datpack *parse_colorscheme(struct colschemes *cs, int *pck_cnt);
